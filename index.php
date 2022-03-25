@@ -62,6 +62,8 @@
         if(isset($usuario)) echo $usuario
         ?>">
         <input type="password" placeholder="Contraseña" name= "contraseña">
+
+        <input type="text" value="2" name= "cargoid" hidden >
         <button name="submit">Registrarse</button>
         </form>
      </div>

@@ -7,11 +7,11 @@ if(isset($_POST['submit'])){
     $correo = $_POST['correo'];
     $usuario = $_POST['usuario'];
     $contraseña = $_POST['contraseña'];
-
+    $cargoid = $_POST['cargoid'];
 }
 
-$query = "INSERT INTO usuarios (nombre, apellidos, correo, usuario, contraseña) 
-VALUES ('$nombre', '$apellidos', '$correo', '$usuario', '$contraseña')";
+$query = "INSERT INTO usuarios (nombre, apellidos, correo, usuario, contraseña, cargoid) 
+VALUES ('$nombre', '$apellidos', '$correo', '$usuario', '$contraseña', '$cargoid')";
 
 $ejecutar = mysqli_query($conexion,$query);
 
@@ -103,13 +103,13 @@ if ($ejecutar){
     </script>
     ';
 } else{
-
+/*
     echo  '
     <script>
     alert("intentalo de nuevo usuario no almacenado");
     window.location= "../index.php";
     </script>
-    ';
+    ';*/
 } 
 
 mysqli_close($conexion);

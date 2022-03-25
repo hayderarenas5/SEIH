@@ -1,9 +1,14 @@
+*{
+	font-family: 'Roboto', sans-serif;
+}
 body {
-	background-color: #17181b;
+	background: -webkit-linear-gradient(left, #aa1400 0%, #04cdff 100%);
+	margin:0
+	
 }
 h1 {
 	text-align: center;
-	color: #fff;
+	color: rgb(241, 11, 11);
 }
 h4{
 	font-size: 16px;
@@ -11,7 +16,7 @@ h4{
 }
 header{
 	padding: 20px 0 0 0;
-	background: #1d2124;
+	background: #ffffff;
 	text-align: center;
 }
 @media (min-width: 750px) {
@@ -21,7 +26,7 @@ header{
 }
 
 .borrar-product {
-	background-color: #00bbbb:
+	background-color: #00bbbb;
 	border-radius:50%;
 	padding: 5px 10px;
 	text-decoration: none;
@@ -35,11 +40,12 @@ ul {
 
 .hero {
 	background-image: url(../img/pared1.jpg);
-	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 551px;
+	
 	background-attachment: fixed;
+	
 }
 .encabezado{
 	margin: 30px 0;
@@ -69,11 +75,12 @@ ul {
 	color: rgb(255,255,255);
 }
 .button {
-	background-color: #00bbbb;
+	background-color: #d43d17c9;
 	color: rgb(255,255,255);
 }
 .contenido-hero{
-	margin-top: 80px;
+	margin-top: 200px;
+	margin-left: -120px;
 	color: #fff;
 }
 .contenido-hero form {
@@ -101,11 +108,11 @@ ul {
 
 .barra {
 	padding: 20px 0;
-	background: -webkit-linear-gradient(left, #0041aa 0%, #00bbbb 100%);
+	background: -webkit-linear-gradient(left, #aa3000 0%, #f58013 100%);
 }
 
 .barra p {
-	margin 0;
+	margin: 0;
 	color: #fff;
 }
 .icono {
@@ -141,9 +148,13 @@ ul {
 }
 .card {
 	text-align: center;
-	border: 1px solid rgba(255,255,255,0.05);
-	background:#1d2124;
+	border: 1px solid rgba(185, 42, 42, 0.05);
+	background:#b95d06;
+	
 }
+
+	
+
 @media (min-width: 550px){
 	.card {
 		text-align: left;
@@ -152,24 +163,27 @@ ul {
 .info-card{
 	padding: 10px 20px;
 	color: #ffff;
+	font-size: 20px;
 	
 }
 .info-card img{
 	background-color: #0041aa;
+	
 }
 .info.card p,
 .card h4 {
 	margin-bottom: 5px;
+	font-size: 25px;
 }
 .info-card .precio {
 	text-decoration: line-through;
-	font-size: 18px;
+	font-size: 21px;
 	margin-top: 10px;
 
 }
 .info-card .precio span {
 	font-weight: 700;
-	font-size: 22px;
+	font-size: 27px;
 }
 .footer {
 	margin-top: 40px;

@@ -1,12 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 5.1.0
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 24-09-2021 a las 09:47:42
--- Versión del servidor: 10.4.18-MariaDB
--- Versión de PHP: 7.4.16
-
+create database login_register_db;
+use login_register_db;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -18,206 +11,96 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `login_register_db`
+-- Estructura de tabla para la tabla `cargo`
 --
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `administrador`
---
-
-CREATE TABLE `administrador` (
-  `id_admin` int(20) NOT NULL,
-  `Nombre` varchar(20) NOT NULL,
-  `Apellido` varchar(20) NOT NULL,
-  `Telefono` int(15) NOT NULL,
-  `Correo` varchar(25) NOT NULL,
-  `Direccion` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `clientes`
+ CREATE TABLE cargo (
+ id_cargo int not null primary key,
+ nombre_cargo varchar (20)
+ );
+ 
+ 
+ --
+-- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `clientes` (
-  `Id_clientes` int(20) NOT NULL,
-  `Nombre` varchar(15) NOT NULL,
-  `Apellidos` varchar(15) NOT NULL,
-  `telefono` int(15) NOT NULL,
-  `direccion` varchar(20) NOT NULL,
-  `Correo` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE usuarios(
+  id_usuarios int   primary key auto_increment,
+  nombre varchar (45)  NOT NULL,
+  apellidos varchar (45)  NOT NULL,
+  correo varchar(45)  NOT NULL,
+  usuario varchar(45)  NOT NULL,
+  contraseña varchar (45) NOT NULL,
+  cargoid int,
+  foreign key (cargoid) references cargo (id_cargo)
+);
+  
 
--- --------------------------------------------------------
-
+ 
 --
--- Estructura de tabla para la tabla `empleados`
+-- Estructura de tabla para la tabla `carrito`
 --
+CREATE TABLE carrito (
+id_carrito int primary key,
+cantidad_produc varchar (45),
+subtotal_produc float (45),
+usuarioid int,
+foreign key (usuarioid) references usuarios (id_usuarios)
+);
 
-CREATE TABLE `empleados` (
-  `Id_empleado` int(20) NOT NULL,
-  `Codigo_empleado` int(20) NOT NULL,
-  `Nombre` varchar(20) NOT NULL,
-  `Apellido` varchar(20) NOT NULL,
-  `Telefono` int(15) NOT NULL,
-  `Direccion` varchar(25) NOT NULL,
-  `Fecha` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
+-- Estructura de tabla para la tabla `transporte`
+--
+CREATE TABLE transporte (
+id_transporte int primary key,
+nombre_conductor varchar (45)
+);
 
 --
 -- Estructura de tabla para la tabla `factura`
 --
 
-CREATE TABLE `factura` (
-  `Id_factura` int(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
+CREATE TABLE factura (
+  Id_factura int primary key auto_increment,
+  fecha DATETIME,
+  carritoid int,
+  idtransporte int,
+  FOREIGN KEY (carritoid) references carrito (id_carrito),
+    FOREIGN KEY (idtransporte) references transporte (id_transporte)
+);
 -- Estructura de tabla para la tabla `productos`
 --
 
-CREATE TABLE `productos` (
-  `id_porduct` int(20) NOT NULL,
-  `Nombre` varchar(20) NOT NULL,
-  `precio` int(10) NOT NULL,
-  `categoria` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
+CREATE TABLE productos (
+  id_porducto int(20) NOT NULL,
+  Nombre varchar(20) NOT NULL,
+  precio int(10) NOT NULL,
+  categoria varchar(20) NOT NULL
+);
 
 --
 -- Estructura de tabla para la tabla `proveedores`
 --
 
-CREATE TABLE `proveedores` (
-  `Id_prove` int(20) NOT NULL,
-  `Nombre` varchar(20) NOT NULL,
-  `telefono` int(15) NOT NULL,
-  `dirección` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE proveedores (
+  Id_prove int(20) NOT NULL,
+  Nombre varchar(20) NOT NULL,
+  telefono int(15) NOT NULL,
+  dirección varchar(25) NOT NULL
+);
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `soporte`
---
+select*from usuarios;
+select*from cargo;
 
-CREATE TABLE `soporte` (
-  `Id_soporte` int(20) NOT NULL,
-  `fecha` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+insert into cargo (id_cargo,nombre_cargo)
+values ("1", "administrador");
+insert into cargo (id_cargo,nombre_cargo)
+values ("2", "cliente");
+insert into cargo (id_cargo,nombre_cargo)
+values ("3", "empleado");
+select*from usuarios ;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuarios`
---
-
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `nombre` text COLLATE utf8_spanish_ci NOT NULL,
-  `apellidos` text COLLATE utf8_spanish_ci NOT NULL,
-  `correo` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
-  `usuario` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
-  `contraseña` varchar(20) COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `nombre`, `apellidos`, `correo`, `usuario`, `contraseña`) VALUES
-(1, 'hola', 'como estas', 'como estas', 'como estas', 'como estas'),
-(2, 'hola', 'como', 'mama', 'sntigo23', '3434');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `ventas`
---
-
-CREATE TABLE `ventas` (
-  `Id_venta` int(20) NOT NULL,
-  `cantidad` varchar(20) NOT NULL,
-  `Id_factura` int(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `administrador`
---
-ALTER TABLE `administrador`
-  ADD PRIMARY KEY (`id_admin`);
-
---
--- Indices de la tabla `clientes`
---
-ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`Id_clientes`);
-
---
--- Indices de la tabla `empleados`
---
-ALTER TABLE `empleados`
-  ADD PRIMARY KEY (`Id_empleado`);
-
---
--- Indices de la tabla `factura`
---
-ALTER TABLE `factura`
-  ADD PRIMARY KEY (`Id_factura`);
-
---
--- Indices de la tabla `productos`
---
-ALTER TABLE `productos`
-  ADD PRIMARY KEY (`id_porduct`);
-
---
--- Indices de la tabla `proveedores`
---
-ALTER TABLE `proveedores`
-  ADD PRIMARY KEY (`Id_prove`);
-
---
--- Indices de la tabla `soporte`
---
-ALTER TABLE `soporte`
-  ADD PRIMARY KEY (`Id_soporte`);
-
---
--- Indices de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `ventas`
---
-ALTER TABLE `ventas`
-  ADD PRIMARY KEY (`Id_venta`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
-
+show tables;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
