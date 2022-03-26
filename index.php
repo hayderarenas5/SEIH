@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
    
-     <link rel="stylesheet" href="vista/css/estilos.css">
+     <link rel="stylesheet" href="../SEIH/vista/css/estilos.css">
 </head>
 <body>
 
@@ -33,14 +33,12 @@
 <!--formulario login y registro-->
     <div class="contenedor__login-register"> 
         <!--login-->
-        <form action="" class="formulario__login">
-         <h2>Iniciar sesion</h2>
-         <input type="text" placeholder="Correo electronico">
-        <input type="password" placeholder="Contraseña">
+        <form action="modelo/validarInit.php" class="POST">
+        <h2>Iniciar sesion</h2>
+        <input type="text" placeholder="Nombre Del Usuario" name="usuario">
+        <input type="password" placeholder="Contraseña" name="contraseña">
 
-         <button>
-             <a href="vista/pagina_principal.php" target="_self"> Entrar </a>
-         </button>
+        <button name="submit">Iniciar Sesión</button>
 
 
     

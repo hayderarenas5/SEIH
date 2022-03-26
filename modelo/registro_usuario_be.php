@@ -1,6 +1,6 @@
 <?php
-
 include 'conexion_be.php';
+
 if(isset($_POST['submit'])){
     $nombre = $_POST['nombre'];
     $apellidos = $_POST['apellidos'];
@@ -103,17 +103,14 @@ if ($ejecutar){
     </script>
     ';
 } else{
-/*
     echo  '
     <script>
     alert("intentalo de nuevo usuario no almacenado");
     window.location= "../index.php";
     </script>
-    ';*/
+    ';
 } 
 
 mysqli_close($conexion);
-    
-
 
 ?>

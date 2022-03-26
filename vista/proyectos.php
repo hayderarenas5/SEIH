@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="retorno">
-    <li><a href="http://localhost/SEIH/vista/pagina_principal.php"><i class="fas fa-undo-alt">Volver</i></a></li>
+    <li><a href="../vista/pagina_principal.php"><i class="fas fa-undo-alt">Volver</i></a></li>
 </div>
 <div class="parrafo">
         <h3 class="misi">MISIÓN</h3>
