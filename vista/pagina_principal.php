@@ -26,13 +26,13 @@
                 <ul class="menu">
                     <li><a href="#"><i class="fas fa-home"></i>Inicio</a></li>
                     <li><a href="#"><i class="fab fa-black-tie"></i>Trabajos</a></li>
-                    <li><a href="http://localhost/SEIH/vista/proyectos.php"><i class="fas fa-bell"></i>Proyectos</a></li>
-                    <li><a href="http://localhost/SEIH/vista/garantiaI.php"><i class="fas fa-server"></i>Servicios</a></li>
+                    <li><a href="http://localhost/SEIH/proyectos.php"><i class="fas fa-bell"></i>Proyectos</a></li>
+                    <li><a href="http://localhost/SEIH/garantiaI.php"><i class="fas fa-server"></i>Servicios</a></li>
                     <li><a href="#footer"><i class="fas fa-address-card"></i>Contactos</a></li>
                 </ul>
             </nav>
         <div class="ayuda">
-            <a href="http://localhost/SEIH/vista/ayuda.php"><i class="fas fa-question"></i></a>
+            <a href="http://localhost/SEIH/ayuda.php"><i class="fas fa-question"></i></a>
         </div>
     </header>
 
@@ -56,12 +56,12 @@
 </div>
     <div class="content-all">
         <div class="content-carrousel">
-            <figure><a href="http://localhost/SEIH-master/mitad/index.html"><img src="imagenes/extintores/clasea.png" alt=""></a></figure>
-            <figure><a href="http://localhost/SEIH-master/mitad/index.html"><img src="imagenes/extintores/claseabc.jpg" alt=""></a></figure>
-            <figure><a href="http://localhost/SEIH-master/mitad/index.html"><img src="imagenes/extintores/claseb.png" alt=""></a></figure>
-            <figure><a href="http://localhost/SEIH-master/mitad/index.html"><img src="imagenes/extintores/clasebc.jpg" alt=""></a></figure>
-            <figure><a href="http://localhost/SEIH-master/mitad/index.html"><img src="imagenes/extintores/clased.jpg" alt=""></a></figure>
-            <figure><a href="http://localhost/SEIH-master/mitad/index.html"><img src="imagenes/extintores/clasek.jpg" alt=""></a></figure>
+            <figure><a href="http://localhost/SEIH/mitad/index.html"><img src="imagenes/extintores/clasea.png" alt=""></a></figure>
+            <figure><a href="http://localhost/SEIH/mitad/index.html"><img src="imagenes/extintores/claseabc.jpg" alt=""></a></figure>
+            <figure><a href="http://localhost/SEIH/mitad/index.html"><img src="imagenes/extintores/claseb.png" alt=""></a></figure>
+            <figure><a href="http://localhost/SEIH/mitad/index.html"><img src="imagenes/extintores/clasebc.jpg" alt=""></a></figure>
+            <figure><a href="http://localhost/SEIH/mitad/index.html"><img src="imagenes/extintores/clased.jpg" alt=""></a></figure>
+            <figure><a href="http://localhost/SEIH/mitad/index.html"><img src="imagenes/extintores/clasek.jpg" alt=""></a></figure>
 
         </div>
     </div>

@@ -23,7 +23,7 @@
 			
 		</div>
             <nav class="menu_pc">
-                <p class="texto">BIENVENIDO ADMINISTRADOR</p>
+                <h4 class="texto">BIENVENIDO ADMINISTRADOR</h4>
             </nav>
         <div class="ayuda">
             <a href="http://localhost/SEIH/vista/ayuda.php"><i class="fas fa-question"></i></a>

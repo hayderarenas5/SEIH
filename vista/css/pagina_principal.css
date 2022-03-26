@@ -1,5 +1,5 @@
 body{
-    background-color: white;
+    background-color: rgb(247, 242, 197);
     font-family: sans-serif;
     padding-top: 0px;
     transition: padding-top 0.5s ease;
@@ -37,11 +37,14 @@ header nav {
 	float: right;
 	margin-top: -105PX;
 	position: absolute;
-	margin-left: 200px;
+	margin-left: 280px;
+
 }
 header nav ul {
 	overflow:hidden;
 	list-style:none;
+	margin-top: -15px;
+	margin-left: 105px;
 }
 
 header nav ul li {
@@ -54,6 +57,7 @@ header nav ul li a {
 	display:block;
 	text-decoration:none;
 	transition: none;
+	margin-right: 10px;
 }
 
 header nav ul li i {
@@ -62,6 +66,7 @@ header nav ul li i {
 }
 
 header nav ul li a:hover {
+	margin-top: 12px;
 	background:#ff1919d5;
 	height: 65px;
 }
@@ -119,15 +124,16 @@ section {
 	color: #f70f0fd5;
 	border-color: red;
 }
-/*FIN HEADER*/
-/* INICIO mitad */
 .texto_titulo{
 	color: red;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	margin-left: 3.3%;
+	margin-left: 2%;
 	height: 40px;
 	margin-top: -5px;
+	font-size: 18.5px;
 }
+/*FIN HEADER*/
+/* INICIO mitad */
 .mitad{
 	z-index: 1;
     width: 650px;
@@ -140,7 +146,7 @@ section {
     rgb(0, 23, 126);
     border-radius: 5px;
     text-align: justify;
-	margin-left: 25%;
+	margin-left: 28%;
 	margin-top: 15px;
 }
 .mitad P{
@@ -175,12 +181,14 @@ h2{
 	text-shadow: 0px 0px 6px black;
 }
 .nota p{
-	align-items: center;
+	text-align: center;
 	color: rgb(0, 23, 126);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .nota{
+	text-align: center;
 	color: rgb(0, 23, 126);
+	font-size: 18px;
 	
 }
 .content-all{
@@ -249,7 +257,7 @@ footer{
     padding: 50px 0px;
 	height: 30%;
     background-size: cover;
-    margin-top: 400px;
+    margin-top: 450px;
     background-color: #c50b0b;
     
     }

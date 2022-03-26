@@ -12,6 +12,7 @@ header {
 .enbacezado{
 	position: relative;
 	width: 100%;
+
 }
 header nav {
 	width:90%;
@@ -36,7 +37,15 @@ header nav {
 	float: right;
 	margin-top: -105PX;
 	position: absolute;
-	margin-left: 200px;
+	margin-left: 300px;
+}
+.menu_pc .texto{
+	text-align: center;
+	color: white;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	margin-top: 10px;
+
+
 }
 header nav ul {
 	overflow:hidden;
@@ -68,6 +77,7 @@ header nav ul li a:hover {
 section {
 	padding:20px;
 }
+
 
 @media screen and (max-width:800px ) {
 	header nav {
@@ -112,7 +122,7 @@ section {
 /* INICIO mitad */
 .mitad{
 	z-index: 1;
-    width: 950px;
+    width: 1050px;
     height: 450px;
     padding: 20px 20px;
     font-size: 25px;
@@ -122,6 +132,6 @@ section {
     rgb(0, 23, 126);
     border-radius: 5px;
     text-align: justify;
-	margin-left: 15%;
+	margin-left: 18%;
 	margin-top: 15px;
 } 
