@@ -25,10 +25,10 @@
             <nav class="menu_pc">
                 <h4 class="texto">BIENVENIDO ADMINISTRADOR</h4>
             </nav>
-        <div class="ayuda">
-            <a href="ayudaAdministrador.php"><i class="fas fa-question"></i></a>
-        </div>
     </header>
+    <div class="ayuda">
+            <a href="ayudaAdministrador.php"><i class="fas fa-question"></i></a>
+    </div>
     <!-- FIN HEADER -->
     <!-- Inicio MITAD PAGINA -->
 <div>

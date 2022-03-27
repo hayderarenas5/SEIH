@@ -118,7 +118,24 @@ section {
 		font-size:40px;
 	}
 }
-
+.ayuda{
+	float: right;
+	margin-left: 5px;
+	margin-top: -80px;
+	margin-right: 60px;
+}
+.ayuda a i{
+	color: #f70f0fd5;
+	border-color: red;
+}
+.texto_tituloo{
+	color: red;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	margin-left: 2%;
+	height: 40px;
+	margin-top: -5px;
+	font-size: 18.5px;
+}
 /* INICIO mitad */
 .mitad{
 	z-index: 1;

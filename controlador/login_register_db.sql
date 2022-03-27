@@ -98,7 +98,15 @@ insert into cargo (id_cargo,nombre_cargo)
 values ("2", "cliente");
 insert into cargo (id_cargo,nombre_cargo)
 values ("3", "empleado");
-select*from usuarios ;
+
+INSERT INTO usuarios (nombre, apellidos, correo, usuario, contraseña, cargoid) 
+VALUES ('hayder', 'arenas', 'hayder@gmail.com', 'hayder', 'hayder123', '2');
+
+INSERT INTO usuarios (nombre, apellidos, correo, usuario, contraseña, cargoid) 
+VALUES ('santiago', 'ladino', 'santiago@gmail.com', 'santiago', 'santiago123', '2');
+
+INSERT INTO usuarios (nombre, apellidos, correo, usuario, contraseña, cargoid) 
+VALUES ('alex', 'arenas', 'arbey@gmail.com', 'arbey', 'alex123', '1');
 
 show tables;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
