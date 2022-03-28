@@ -33,14 +33,12 @@
 <!--formulario login y registro-->
     <div class="contenedor__login-register"> 
         <!--login-->
-        <form action="modelo/validarInit.php" class="POST">
+        <form action="modelo/validarInit.php" method="POST">
         <h2>Iniciar sesion</h2>
         <input type="text" placeholder="Nombre Del Usuario" name="usuario">
-        <input type="password" placeholder="Contraseña" name="contraseña">
+        <input type="password" placeholder="Contraseña" name="contrasena">
 
         <button name="submit">Iniciar Sesión</button>
-
-
     
         </form>
         

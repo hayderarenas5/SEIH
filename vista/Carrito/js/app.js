@@ -27,7 +27,8 @@ function leerDatosCatalogo(catalogo) {
      const infoCatalogo = {
           imagen: catalogo.querySelector('img').src,
           titulo: catalogo.querySelector('h4').textContent,
-          precio: catalogo.querySelector('.precio span').textContent,
+          precio: catalogo.querySelector('.precio').value,
+          cantidad: catalogo.querySelector('.cantidad').value,
           id: catalogo.querySelector('a').getAttribute('data-id')
      }
      insertarCarrito(infoCatalogo);
@@ -40,7 +41,9 @@ function insertarCarrito(catalogo) {
                <img src="${catalogo.imagen}" width=100>
           </td>
           <td>${catalogo.titulo}</td>
-          <td>${catalogo.precio}</td>
+          <td>$${catalogo.precio}</td>
+          <td>${catalogo.cantidad}</td>
+          <td>$${+catalogo.precio * +catalogo.cantidad}</td>
           <td>
                <a href="#" class="borrar-catalogo" data-id="${catalogo.id}">X</a>
           </td>
@@ -113,6 +116,8 @@ function leerLocalStorage() {
                </td>
                <td>${catalogo.titulo}</td>
                <td>${catalogo.precio}</td>
+               <td>$${catalogo.cantidad}</td>
+               <td>$${+catalogo.precio * +catalogo.cantidad}</td>
                <td>
                     <a href="#" class="borrar-catalogo" data-id="${catalogo.id}">X</a>
                </td>
@@ -128,8 +133,8 @@ function eliminarCatalogoLocalStorage(catalogo) {
 
      catalogosLS = obtenerCatalogosLocalStorage();
 
-     catalogosLS.forEach(function(catalogosLS, index){
-          if(catalogosLS.id === catalogo) {
+     catalogosLS.forEach(function(elm, index){
+          if(elm.id === catalogo) {
                catalogosLS.splice(index, 1);
           }
      });

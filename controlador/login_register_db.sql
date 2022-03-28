@@ -1,6 +1,4 @@
-create database login_register_db;
-use login_register_db;
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
 START TRANSACTION;
 SET time_zone = "+00:00";
 
